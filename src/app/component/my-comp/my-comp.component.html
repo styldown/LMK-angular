@@ -1,0 +1,7 @@
+
+<div  *ngIf="param.length > 2" class="d-flex" [ngClass]="isRow? 'd-flexRow' : 'd-flexColumn'">
+    <mat-card *ngFor="let item of param">
+      <mat-card-content>{{item.text}}</mat-card-content>
+    </mat-card>
+</div>
+

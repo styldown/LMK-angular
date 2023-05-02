@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Toto';
   cardListRow = [
-    {text: 'This is a card'},
+    {text: 'This is a card', id: 1},
     {text: 'This is a card'},
     {text: 'This is a card'},
   ];

@@ -7,39 +7,19 @@
     <!-- Modifier le code ci-dessous -->
     <div class="content d-flex">
       <!-- Ces éléments sont affichés sur la même ligne -->
-      <div class="d-flex">
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
+      <app-my-comp class ="d-flex" [param]="cardListRow" [isRow]="true"></app-my-comp>
+      <div class ="d-flex2">
         <mat-card>
           <mat-card-content>This is a card</mat-card-content>
         </mat-card>
       </div>
-      <div>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-      </div>
-      <div>
+      <div class ="d-flex3">
         <mat-card>
           <mat-card-content>This is a card</mat-card-content>
         </mat-card>
       </div>
       <!-- Ces éléments sont affichés l'un en dessous de l'autre -->
-      <div>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-      </div>
+      <app-my-comp class ="d-flex" [param]="cardListColumn" [isRow]="false"></app-my-comp>
     </div>
 
     <!-- Footer -->
