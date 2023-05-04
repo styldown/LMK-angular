@@ -1,7 +1,17 @@
-
-<div  *ngIf="param.length > 2" class="d-flex" [ngClass]="isRow? 'd-flexRow' : 'd-flexColumn'">
+<div *ngIf="param.length > 2" class="d-flex" [ngClass]="isRow? 'd-flexRow' : 'd-flexColumn'">
     <mat-card *ngFor="let item of param">
-      <mat-card-content>{{item.text}}</mat-card-content>
+        <img src="{{item.image}}" alt="{{item.name}}" class="d-flex" width="150" height="100px" />
+        <mat-card-content>Nom: {{item.name}}</mat-card-content>
+        <mat-card-content>Type: {{item.slug}}</mat-card-content>
+        <button class="favorite styled" type="button" (click)="remove(item.id)">
+            Supprimer
+        </button>
+        <button class="favorite styled" type="button" (click)="update(item)">
+            Details
+        </button>
+        <button class="favorite styled" type="button" (click)="updateForm(item)">
+            Update
+        </button>
+
     </mat-card>
 </div>
-

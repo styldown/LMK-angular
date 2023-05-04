@@ -1,5 +1,5 @@
 import { Card } from './../../models/Card';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-my-comp',
@@ -9,6 +9,20 @@ import { Component, Input } from '@angular/core';
 export class MyCompComponent {
   @Input() param!: Card[];
   @Input() isRow!: boolean;
+  @Output() newItemEvent = new EventEmitter<number>();
+  @Output() newItemEvent2 = new EventEmitter<Card>();
+  @Output() newItemEvent3 = new EventEmitter<Card>();
+
+  remove(value: number) {
+    this.newItemEvent.emit(value);
+  }
+  update(pokemon: Card){
+    this.newItemEvent2.emit(pokemon);
+ }
+
+ updateForm(pokemon: Card){
+    this.newItemEvent3.emit(pokemon);
+ }
 }
 
 
