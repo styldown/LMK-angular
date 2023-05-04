@@ -1,8 +1,17 @@
 .content {
+  display: flex;
+  flex-direction: column;
+  
   margin: 82px auto 32px;
   padding: 0 16px;
   max-width: 960px;
+
 }
+
+
+.d-flex2  {display:flex; justify-content: space-evenly}
+.d-flex3 {display:flex; justify-content: end}
+
 
 svg#clouds {
   position: fixed;

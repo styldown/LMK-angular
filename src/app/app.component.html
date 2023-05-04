@@ -7,40 +7,12 @@
     <!-- Modifier le code ci-dessous -->
     <div class="content d-flex">
       <!-- Ces éléments sont affichés sur la même ligne -->
-      <div class="d-flex">
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-      </div>
-      <div>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-      </div>
-      <div>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-      </div>
+      <app-my-comp class ="d-flex" [param]="cardListRow" [isRow]="true" (newItemEvent)="removeItem($event)" (newItemEvent2)="updateDetails($event)" (newItemEvent3)="updateForm($event)"></app-my-comp>
       <!-- Ces éléments sont affichés l'un en dessous de l'autre -->
-      <div>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-content>This is a card</mat-card-content>
-        </mat-card>
-      </div>
     </div>
+
+    <app-pokemon-details *ngIf="details"  [pokemon]="details"></app-pokemon-details>
+    <app-formulaire *ngIf="toUpdate" [pokemon]="toUpdate"></app-formulaire>
 
     <!-- Footer -->
     <footer></footer>

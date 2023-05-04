@@ -1,0 +1,14 @@
+
+<p><label for="HP">HP: </label>
+<input id="HP" type="number" [formControl]="HP" [ngModel]="pokemon.stats.HP"></p>
+<p><label for="attack">attack: </label>
+<input id="attack" type="number" [formControl]="attack" [ngModel]="pokemon.stats.attack"></p>
+<p><label for="defense">defense: </label>
+<input id="defense" type="number" [formControl]="defense" [ngModel]="pokemon.stats.defense"></p>
+<p><label for="special_attack">special_attack: </label>
+<input id="special_attack" type="text" [formControl]="special_attack" [ngModel]="pokemon.stats.special_attack"></p>
+<p><label for="special_defense">special_defense: </label>
+<input id="special_defense" type="text" [formControl]="special_defense" [ngModel]="pokemon.stats.special_defense"></p>
+<label for="speed">speed: </label>
+<input id="speed" type="text" [formControl]="speed" [ngModel]="pokemon.stats.speed"> 
+<button (click)="update()">modifier</button>
